@@ -67,12 +67,12 @@ class TestVarasto(unittest.TestCase):
     def test_laitetaan_negatiivinen(self):
         self.varasto.lisaa_varastoon(5)
         self.varasto.lisaa_varastoon(-2)
-        self.assertAlmostEqual(self.varasto.saldo, 5)
+        self.assertAlmostEqual(self.varasto.saldo, 3)
 
     def test_otetaan_negatiivinen(self):
         self.varasto.lisaa_varastoon(8)
         self.varasto.ota_varastosta(-2)
-        self.assertAlmostEqual(self.varasto.saldo, 8)
+        self.assertAlmostEqual(self.varasto.saldo, 6)
 
     def test_tulostus(self):
         self.varasto.lisaa_varastoon(4)
